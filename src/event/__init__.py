@@ -1,5 +1,5 @@
-__all__ = ['Event', 'Fire', 'LocalHazard']
+__all__ = ['Event', 'FireHazard', 'LocalHazard']
 
 from .Event import Event
-from .Fire import Fire
+from .FireHazard import FireHazard
 from .LocalHazard import LocalHazard

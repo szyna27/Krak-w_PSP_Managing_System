@@ -1,13 +1,13 @@
 from .State import State
 
 # Class definition
-class Available(State):
+class Prepared(State):
     # Method for handling state change
     def handle(self, vehicle, event):
-        vehicle.set_prepared()
+        vehicle.set_driving()
 
     def is_available(self):
-        return True
+        return False
     
     def __str__(self):
-        return "Available"
+        return "Prepared"

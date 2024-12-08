@@ -3,15 +3,14 @@ from time import sleep
 from random import random
 
 # Class definition
-class Busy(State):
+class Returning(State):
     # Method for handling state change
     def handle(self, vehicle, event):
-        sleep(5 + random() * 20)
-        event.handled = True
-        vehicle.set_returning()
-
+        sleep(random() * 3)
+        vehicle.set_available()
+    
     def is_available(self):
         return False
-        
+    
     def __str__(self):
-        return "Busy"
+        return "Returning"

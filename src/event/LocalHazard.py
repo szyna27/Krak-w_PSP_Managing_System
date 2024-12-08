@@ -1,16 +1,11 @@
-# Disable possibility of running this file directly
-if __name__ == '__main__':
-    raise Exception("This file cannot be run directly")
-
-# Import necessary modules
+from src.iterator.VehicleIterator import VehicleIterator
 from .Event import Event
 
 # Class definition
 class LocalHazard(Event):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, color):
+        super().__init__(color)
+        self.vehicles_needed = 2
 
-    # Method for handling local hazard
-    def handle(self):
-        print("Local hazard is being handled")
-        pass
+    def __str__(self):
+        return f"{self.color}LocalHazard event in location: {self.location}{self.color_end}"

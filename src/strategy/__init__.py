@@ -1,4 +1,5 @@
-__all__ = ['Strategy', 'ClosestStationFirst']
+__all__ = ['Strategy', 'FireHazardStrategy', 'LocalHazardStrategy']
 
 from .Strategy import Strategy
-from .ClosestStationFirst import ClosestStationFirst
+from .FireHazardStrategy import FireHazardStrategy
+from .LocalHazardStrategy import LocalHazardStrategy
